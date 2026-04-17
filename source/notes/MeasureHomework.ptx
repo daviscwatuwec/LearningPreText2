@@ -1,0 +1,22 @@
+<handout>
+    <title>Measure theory homework (optional)</title>
+  <ol>
+    <li> <p>In Theorem <!--<xref ref="FactsAbtMeasure-xref"/>-->(REFERENCE DELETED FOR DEBUGGING!!!!!) we were pretty lazy with the amount of detail we gave.  Pick one or two of these and compose a full proof.</p></li>
+    <li> <p>An uncountable measure zero set The famous "Cantor set" or "Cantor dust" has a few equivalent definitions: </p>
+    <ol>
+      <li>
+        <p>The set of all real numbers which have base 3 expansions containing only 0 and 2 (so <m>.002020002\dots</m> is in the Cantor set, but <m>0.1201</m> is not.  Note that <m>0.1=0.22222\dots</m> is in the Cantor set)
+        </p>
+      </li>
+      <li>
+        <p>(A recursive definition)
+          For a set <m>X</m> and <m>a,b\in \R</m> define <m>aX+b = \{ax+b\mid x\in X\}</m>.  Define a sequence of sets by 
+          <m>C_0=[0,1], C_{n+1} = \frac{1}{3}C_n \cup (\frac{1}{3}C_n+\frac{2}{3})</m>. Cantor's set is given by <m>C=\cap_{n=1}^\infty C_n</m>
+        </p>
+      </li>
+      <p>It is not too hard to use the first definition to show that <m>C</m> is in bijection with <m>[0,1]</m>.  I want you to study these definitions and compose an argument that \(C\) has measure zero.   </p>
+    </ol></li>
+  </ol>
+
+
+</handout>

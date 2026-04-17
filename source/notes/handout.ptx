@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<handout>
+  <title>Day 1 Guided Notes</title>
+
+  <p workspace="2in">
+    Warm up: Use the limit definition of the derivative to find <m>\frac{d}{dx} 4x^2</m>.
+  </p>
+
+  <definition workspace="1in">
+    <statement>
+      <p>
+        The derivative of a function <m>f(x)</m> is defined as...
+      </p>
+    </statement>
+  </definition>
+
+</handout>

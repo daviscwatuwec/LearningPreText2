@@ -1,0 +1,116 @@
+  <?xml version="1.0" encoding="UTF-8"?>
+  <section>
+    <title>defining outer measure</title>
+      
+  <p>Recall the definition of the upper and lower Riemann sums:
+  Let <m>f:[a,b]\to \mathbb{R}</m>
+  be a function and <m>P=\{x_0\lt \dots\lt x_n\}</m> be a partition. 
+    Let <m>M(f,[x_{i-1},x_i]) = \sup(f(~[x_{i-1},x_i]~))</m> and 
+    <m>m(f,[x_{i-1},x_i]) = \inf(f(~[u,v]~))</m>  be the supremum and infemum of <m>f</m> over the <m>i</m>th member of the partition, and 
+  <m>\ell(~[x_{i-1},x_i]~)=x_{i}-x_{i-1}</m>
+    be its length.  write the definitions of </p>
+    <p workspace="2cm">
+      <m>U(P,f) </m> and <m>L(P,f)</m> </p>
+      <solution><m>U(P,f) =\Sum_{i=1}^n M(f, [x_{i-1}, x_{i}])\ell([x_{i-1},x_i]) </m> and <m>L(P,f) = \Sum_{i=1}^n m(f,[x_{i-1}, x_i])\cdot \ell(~[x_{i-1}, x_i]~).</m>
+      </solution>
+    <p>The basic idea is that since we can "measure" the length of intervals, we can use them to build rectangles to get the area.  We have seen that this can fail to resolve the computation of some integrals.  Recall that upper integral and lower integral of the indicator function of <m>\Q</m> disagree: <m>\overint_0^1\chi_\Q~dx=1</m> while <m>\lowerint_0^1\chi_\Q~dx=0</m> (I am not using the standard notation of a line on top or below due to technical formatting issues), so the philosophy of upper and lower sums only tells you that the area under the curve is somewhere between 0 and 1. </p>
+
+    <p> If we could "measure" more sets than just intervals, then we might be able to get better information about integration</p>
+    <p>The fundamental question of measure theory is How to extend this to any subset of <m>\mathbb R</m>>?  Can we measure the "length" of <m>\mathbb Q</m></p>
+
+
+  <p> <b>Idea</b> If <m>X</m> is contained in q union of open intervals:  <m>X\subseteq I_1\cup I_2\cup I_3\dots</m> then the "measure" of <m>X</m> should be <b>at most</b> the sum of the lengths, <m>\ell(I_1)+\ell(I_2)+\dots</m>. </p>
+
+    <definition xml:id="DefnOuterMeasure-s-xref">
+      <title>Total length and outer measure</title>
+      <statement>
+        <p>
+          Let <m>\mathcal{I} = \{I_1,I_2,I_3,\dots\}</m> be a countable collection of open intervals (remember countable means either finite or countably infinite) the total length of <m>\I</m> is <m>\ell(\I) = .</m></p>
+            <p workspace=".5cm"></p>
+            
+            <p>For any set <m>X\subseteq \R</m>, we define the <b>outer measure</b> of <m>X</m> by </p>
+            <p><m>m^*(X)=</m></p>
+            <p workspace="1cm"></p>
+      </statement>
+    </definition>
+    <solution><title>details</title><p>The total length is the sum of the lengths of the intervals in <m>\mathcal{I}</m>:  <m>\ell(\I) = \Sum_{I\in \mathcal{I}}\ell(I)</m> and the outer measure is  <m>m^*(X) = \inf(\{\ell(\I)\})</m> where <m>\I</m> runs over all countable open covers of <m>X</m> by open intervals.</p></solution>
+  </section>
+    <section>
+    <title>Computing outer measure</title>
+
+    <theorem xml:id="FactsAbtMeasure-xref">
+      <title>Facts about outer measure</title>
+      <ol>
+        <li><p> (points have no measure)  For any <m>x_0\in \R</m>, <m>m^*(\{x_0\})=0</m></p></li>
+        <li><p> (monotonicity)  If <m>U\subseteq V</m> then <m>m^*(U)\le m^*(V)</m></p></li>
+        <li><p> (countable subadditivity)  For any countable collection of sets <m>X_1,X_2,\dots</m>, <m>m^*\left(\cup_k X_k\right)\le \Sum_k m^*(X_k)</m></p></li>
+        </ol>
+    </theorem>
+    <proof>
+      <p workspace="3cm">
+        
+      </p>
+      <solution>
+        <ol><li><p>For any <m>\epsilon\gt0</m>, <m>\{(x_0-\epsilon, x_0+\epsilon)}</m> is an open cover (containing only one element) with total length <m>2\epsilon</m>, so <m>m^*(\{x_0\})\le 2\epsilon</m>.  Take <m>\epsilon\to 0</m> to complete the proof.  
+        </p></li>
+        <li><p>For any countable open cover <m>\I</m> of <m>V</m> by intervals, <m>\I</m> also covers <m>U</m>, so <m>m^*(U)\le \ell(\I)</m>.  This means that <m>m^*(U)</m> is a lower bound an the set of all total lengths of countable open covers of <m>V</m>.  Thus, <m>m^*(U)\le m^*(V)</m>.  
+        </p></li>
+        <li><p>
+          Let <m>\epsilon\gt 0</m>.  For each <m>k</m>, find a countable open cover <m>I_k</m> which does a good job approximating <m>X_k</m>.  More precisely, since <m>m^*(X_k)-\epsilon\cdot 2^{-k}\lt m^*(X_k)</m> there is a countable open cover <m>\I_k</m> of <m>X_k</m> with <m>m^*(X_k)-\epsilon\cdot 2^{-k} \le \ell(\I_k)</m>.  (We pick powers of 2 since <m>\Sum_{k=1}^\infty 2^{-k}=1</m>).  A countable union of countable sets is still countable, so <m>\I:=\cup_k \I_k</m> is a countable collection of open intervals.  For any <m>x\in \Cup_k X_k</m>, <m>x</m> is in some <m>X_k</m> and so is an element of some <m>I\in \I_k\subseteq \I</m>.  Thus, <m>\I</m> is a countable open cover, and so <m>m^*\left(\cup_k X_k\right)\le \SUm_{I\in \I}\ell(I) \le \Sum_k \Sum_{I\in \I_k} \ell(I) = \Sum_k\ell(\I_k)\gt \Sum_k(m^*(X_k)-\epsilon\cdot 2^{-k}) = \Sum_k(m^*(X_k))-\epsilon</m>.  Take <m>\epsilon\to 0</m> to complete the proof.  
+        </p></li></ol>
+      </solution>
+    </proof>
+
+    Here is a neat corollary
+
+    <corollary xml:id="cor-QCountable">
+      <statement>
+        <p>
+          Any countable set has outer measure zero.  In particular, <m>m^*(\Q)=0</m> even though <m>\Q\subseteq \R</m> is dense!
+        </p>
+      </statement>
+    </corollary> <proof>
+      <p workspace="1cm">
+        
+      </p>
+      <solution>
+        Any countable set is a countable union of singleton sets:  <m>Q=\Cup_{q\in Q} \{q\}</m> so countable subadditivity and the fact that singletons have measure zero completes the proof.  
+      </solution>
+    </proof>
+
+  
+    <theorem>
+      <title> measure agrees with length</title>
+      For any (closed) interval <m>I=[a,b]</m>, <m>m^*(I) = b-a</m>.
+    </theorem>
+    <proof>
+      <title>Proof of <m>\le</m></title>
+      <p workspace="1cm">
+        Consider any <m>\epsilon\gt0</m> and prove that <m>m^*([a,b])\le b-a+\epsilon</m> by finding a very simple open cover.  Take <m>\epsilon\to 0</m> to make a conclusion.
+      </p>
+      <solution>
+        <p>
+          We will use an open cover of <m>[a,b]</m> continaing only one element: <m>\mathcal{I} = \{\left(a-\frac{\epsilon}{2}, b+\frac{\epsilon}{2}\right)\}</m>.   Since the outer measure is an infimum, this means that <m>m^*(I)\le \ell\left(a-\frac{\epsilon}{2}, b+\frac{\epsilon}{2}\right) = b-a+\epsilon</m>
+        </p>
+      </solution>
+    </proof>
+    <proof>
+      <title>Proof of <m>\ge</m></title>
+      <p workspace="3cm">
+      In order to show that <m>m^*([a,b])\ge b-a</m> we need to show that *every* open cover has total length at least <m>b-a</m>.  Let <m>\I</m> be any countable open cover of <m>[a,b]</m> by open intervals.  Use compactness to make a conclusion.
+      </p>
+      <solution>
+        <p>
+          Since <m>[a,b]</m> is closed and bounded it is compact.  Since <m>\I</m> is an open cover, it has a finite subcover, <m>\J=\{I_1,\dots I_n\}</m>.  Notice that throwing out a bunch of elements reduces the total length, so \(\ell(\J)\le \ell(\I)\).  
+        </p>
+
+      </solution>
+        <p workspace="3cm">
+          Next we rely on the following fact (which has a straightforward inductive proof based on the number of elements of <m>\J</m>).  If <m>\mathcal{J}</m> is a finite collection of open intervals, then there is another countable colection of <b>disjoint</b> open intervals <m>\J'</m> with <m>\Cup_{J\in \J} J = \Cup_{J\in J'}J</m> and <m>\ell(\J')=\ell(\J)</m>.  Use this to conclude that <m>\ell(\I)\ge \ell(\J)\ge \ell(\J')\ge b-a</m> and finish the proof.
+        </p>
+        <solution>
+          <p>
+            We now have <m>[a,b]\subseteq \Cup_{I\in \J'} I</m>.  Since the elements of <m>\J'</m> are all disjoint, <m>[a,b]</m> must be a subset of a single element <m>(u,v)</m> of <m>\J'</m> .  Thus, <m>b-a\lt v-u\le \ell(\J')</m> the fact we appealed to says that <m>\ell(\J')\le \ell(\J)</m>.  Since <m>\J\subseteq \I</m>, <m>\ell(\J)\le \ell(\I)</m>.  Thus we have shown that <m>b-a</m> is a lower bound on the total length of any countable cover, so <m>m^*([b,a])\le b-a</m>        </p>
+        </solution>
+    </proof>
+  </section>

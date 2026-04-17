@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<handout>
+  <title>The Riemann Lebesgue Lemma part 1</title>
+
+ <section xml:id="sec-definingMeasure-s-xref">
+  <title>The Riemann Lebesgue lemma</title>
+<p> Here are two things you will remember from the unit on the Riemann integral:  
+  <ul>
+    <li>
+      <p>
+        Every continuous function is integrable
+      </p>
+    </li>
+    <li>
+      <p>
+        The indicator function for the rationals <m>\chi_\Q</m> is not integrable.  It is also discontinuous at every point in \(\R\).  
+      </p>
+    </li>
+  </ul>
+ </p>
+
+ <p>
+  This suggests the following.  Perhaps a function is integrable if and only if it is <i>not too discontinuous</i> whatever that means. </p>
+
+  <theorem xml:id="thm-">
+    <title>The Riemann Lebesgue lemma</title>
+    <statement>
+      <p>
+        A function <m>f:[a,b]\to \R</m> is integrable over <m>[a,b]</m> if and only if <m>m^*(\discont(f))=0</m>
+      </p>
+    </statement>
+  </theorem>
+  <p workspace="1cm"> Here <m>\discont(f)</m> is the set of all discontinuities of <m>f</m>.  Look back at the definition of the outer measure.  <m>m^*(\discont(f))=0</m> if and only if <m>\dots</m>.
+ </p>
+ <solution>
+  <m>m^*(\discont(f))=0</m> if and only if for every <m>\epsilon\gt 0</m> there is a countable cover <m>\I</m> of <m>\discont(f)</m> by open interval with total length less than <m>\epsilon</m>.
+ <solution>
+
+  
+
+</section>
+
+
+</handout>
