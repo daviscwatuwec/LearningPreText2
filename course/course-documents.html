@@ -35,11 +35,11 @@ window.MathJax = {
     "packages": {
       "[+]": [
         "base",
-        "extpfeil",
         "ams",
         "amscd",
         "color",
         "newcommand",
+        "textmacros",
         "knowl"
       ]
     }
@@ -55,10 +55,10 @@ window.MathJax = {
   "loader": {
     "load": [
       "input/asciimath",
-      "[tex]/extpfeil",
       "[tex]/amscd",
       "[tex]/color",
       "[tex]/newcommand",
+      "[tex]/textmacros",
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
@@ -136,7 +136,8 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><a class="up-button button" href="root-1-3.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="course-notes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(    \usepackage{amsfonts}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(    \usepackage{array}
+    \usepackage{amsfonts}
     \usepackage{mathtools}
     \newcommand{\deriv}[2]{\frac{d#1}{d#2}}
     \newcommand{\R}{\mathbb{R}}v
@@ -145,16 +146,16 @@ eBookConfig.enable_chatcodes =  false;
     \newcommand{\J}{\mathcal{J}}
     \newcommand{\Sum}{\displaystyle\sum}
     \newcommand{\Int}{\displaystyle\int}
-    \newcommand{\overint}{^U\displaystyle\int}
-    \newcommand{\lowerint}{^L\displaystyle\int}
+    \newcommand{\overint}{\overline{\displaystyle\int}}
+    \newcommand{\lowerint}{\underline{\displaystyle\int}}
     \renewcommand{\Cup}{\displaystyle \bigcup}
     \renewcommand{\Cap}{\displaystyle \bigcap}
+    \newcommand{\osc}{\operatorname{osc}}
     \newcommand{\discont}{\operatorname{discont}}
 \newcommand{\overbar}[1]{\overbracket{#1}}
 \newcommand{\underbar}[1]{\underbracket{#1}}
     \newcommand{\Blank}[1]{
-\begin{tabular}{c}\\\underline{\hspace{#1}}\end{tabular}
-}
+\underline{\hspace{#1}}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}

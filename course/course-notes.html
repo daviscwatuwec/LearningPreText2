@@ -135,26 +135,29 @@ eBookConfig.enable_chatcodes =  false;
 <textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
 </div>
 </div>
-<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="course-documents.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="root-1-3.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(    \usepackage{amsfonts}
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><a class="up-button button" href="root-1-3.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(    \usepackage{array}
+    \usepackage{amsfonts}
     \usepackage{mathtools}
     \newcommand{\deriv}[2]{\frac{d#1}{d#2}}
-    \newcommand{\R}{\mathbb{R}}v
+    \newcommand{\R}{\mathbb{R}}
+    \newcommand{\N}{\mathbb{N}}
     \newcommand{\Q}{\mathbb{Q}}
     \newcommand{\I}{\mathcal{I}}
     \newcommand{\J}{\mathcal{J}}
+    \newcommand{\Lim}{\displaystyle\lim}
     \newcommand{\Sum}{\displaystyle\sum}
     \newcommand{\Int}{\displaystyle\int}
-    \newcommand{\overint}{^U\displaystyle\int}
-    \newcommand{\lowerint}{^L\displaystyle\int}
+    \newcommand{\overint}{\overline{\displaystyle\int}}
+    \newcommand{\lowerint}{\underline{\displaystyle\int}}
     \renewcommand{\Cup}{\displaystyle \bigcup}
     \renewcommand{\Cap}{\displaystyle \bigcap}
+    \newcommand{\osc}{\operatorname{osc}}
     \newcommand{\discont}{\operatorname{discont}}
 \newcommand{\overbar}[1]{\overbracket{#1}}
 \newcommand{\underbar}[1]{\underbracket{#1}}
     \newcommand{\Blank}[1]{
-\begin{tabular}{c}\\\underline{\hspace{#1}}\end{tabular}
-}
+\underline{\hspace{#1}}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -164,7 +167,6 @@ eBookConfig.enable_chatcodes =  false;
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="course-documents.html" class="internal"><span class="title">Course Documents</span></a></div></li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="course-notes.html" class="internal"><span class="title">Course Notes</span></a></div>
 <ul class="structural toc-item-list active">
@@ -176,7 +178,15 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="course-notes-4.html" class="internal"><span class="title">Measure theory homework (optional)</span></a></div></li>
-<li class="toc-item toc-handout"><div class="toc-title-box"><a href="course-notes-5.html" class="internal"><span class="title">Day 1 Guided Notes</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="course-notes-5.html" class="internal"><span class="title">Starting the Riemann-Lebesgue lemma</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="course-notes-5.html#course-notes-5-2" class="internal"><span class="title">The Riemann Lebesgue Lemma part 1</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="course-notes-5.html#course-notes-5-3" class="internal"><span class="title">Oscillation and <span class="process-math">\(\alpha\)</span>-discontinuity.</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="course-notes-5.html#course-notes-5-4" class="internal"><span class="title">Integrability implies <span class="process-math">\(\discont(f)\)</span> has measure zero.</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="course-notes-6.html" class="internal"><span class="title">Day 1 Guided Notes</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="notes-week-02.html" class="internal"><span class="title">Week 2</span></a></div>
 <ul class="structural toc-item-list">
@@ -200,11 +210,12 @@ eBookConfig.enable_chatcodes =  false;
 <section class="introduction" id="course-notes-2"></section><nav class="summary-links"><ul>
 <li><a href="sec-.html" class="internal"><span class="title">Introducing measure theory</span></a></li>
 <li><a href="course-notes-4.html" class="internal"><span class="title">Measure theory homework (optional)</span></a></li>
-<li><a href="course-notes-5.html" class="internal"><span class="title">Day 1 Guided Notes</span></a></li>
+<li><a href="course-notes-5.html" class="internal"><span class="title">Starting the Riemann-Lebesgue lemma</span></a></li>
+<li><a href="course-notes-6.html" class="internal"><span class="title">Day 1 Guided Notes</span></a></li>
 <li><a href="notes-week-02.html" class="internal"><span class="title">Week 2</span></a></li>
 </ul></nav><div class="autopermalink" data-description="Chapter: Course Notes"><a href="#course-notes" title="Copy heading and permalink for Chapter: Course Notes" aria-label="Copy heading and permalink for Chapter: Course Notes">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="course-documents.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

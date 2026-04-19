@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Day 1 Guided Notes</title>
+<title>Starting the Riemann-Lebesgue lemma</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -135,26 +135,29 @@ eBookConfig.enable_chatcodes =  false;
 <textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
 </div>
 </div>
-<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="course-notes-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="course-notes.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="notes-week-02.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(    \usepackage{amsfonts}
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="course-notes-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="course-notes.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="course-notes-6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(    \usepackage{array}
+    \usepackage{amsfonts}
     \usepackage{mathtools}
     \newcommand{\deriv}[2]{\frac{d#1}{d#2}}
-    \newcommand{\R}{\mathbb{R}}v
+    \newcommand{\R}{\mathbb{R}}
+    \newcommand{\N}{\mathbb{N}}
     \newcommand{\Q}{\mathbb{Q}}
     \newcommand{\I}{\mathcal{I}}
     \newcommand{\J}{\mathcal{J}}
+    \newcommand{\Lim}{\displaystyle\lim}
     \newcommand{\Sum}{\displaystyle\sum}
     \newcommand{\Int}{\displaystyle\int}
-    \newcommand{\overint}{^U\displaystyle\int}
-    \newcommand{\lowerint}{^L\displaystyle\int}
+    \newcommand{\overint}{\overline{\displaystyle\int}}
+    \newcommand{\lowerint}{\underline{\displaystyle\int}}
     \renewcommand{\Cup}{\displaystyle \bigcup}
     \renewcommand{\Cap}{\displaystyle \bigcap}
+    \newcommand{\osc}{\operatorname{osc}}
     \newcommand{\discont}{\operatorname{discont}}
 \newcommand{\overbar}[1]{\overbracket{#1}}
 \newcommand{\underbar}[1]{\underbracket{#1}}
     \newcommand{\Blank}[1]{
-\begin{tabular}{c}\\\underline{\hspace{#1}}\end{tabular}
-}
+\underline{\hspace{#1}}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -164,7 +167,6 @@ eBookConfig.enable_chatcodes =  false;
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="course-documents.html" class="internal"><span class="title">Course Documents</span></a></div></li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="course-notes.html" class="internal"><span class="title">Course Notes</span></a></div>
 <ul class="structural toc-item-list contains-active">
@@ -176,7 +178,15 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="course-notes-4.html" class="internal"><span class="title">Measure theory homework (optional)</span></a></div></li>
-<li class="toc-item toc-handout active"><div class="toc-title-box"><a href="course-notes-5.html" class="internal"><span class="title">Day 1 Guided Notes</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="course-notes-5.html" class="internal"><span class="title">Starting the Riemann-Lebesgue lemma</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="course-notes-5.html#course-notes-5-2" class="internal"><span class="title">The Riemann Lebesgue Lemma part 1</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="course-notes-5.html#course-notes-5-3" class="internal"><span class="title">Oscillation and <span class="process-math">\(\alpha\)</span>-discontinuity.</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="course-notes-5.html#course-notes-5-4" class="internal"><span class="title">Integrability implies <span class="process-math">\(\discont(f)\)</span> has measure zero.</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="course-notes-6.html" class="internal"><span class="title">Day 1 Guided Notes</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="notes-week-02.html" class="internal"><span class="title">Week 2</span></a></div>
 <ul class="structural toc-item-list">
@@ -204,7 +214,10 @@ eBookConfig.enable_chatcodes =  false;
         </label><label><input type="radio" name="papersize" value="letter">Letter
         </label>
 </form>
-<details class="print-options"><summary>Additional printing options</summary><div class="header-footer-options">
+<details class="print-options"><summary>Additional printing options</summary><div class="hide-solutions-options"><div class="hide-option">
+<label for="hide-solution-checkbox">Hide solutions</label><input type="checkbox" id="hide-solution-checkbox">
+</div></div>
+<div class="header-footer-options">
 <div class="header-option">
 <span class="title">Print headers</span><label>First page<input type="checkbox" id="print-first-page-header-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-header-checkbox" checked></label>
 </div>
@@ -219,22 +232,188 @@ eBookConfig.enable_chatcodes =  false;
 <button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
 </div>
 </div>
-<section class="handout" id="course-notes-5" data-margins="0.75in 0.75in 0.75in 0.75in"><h2 class="heading hide-type">
-<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Day 1 Guided Notes</span><div class="print-links"><a href="?printpreview=course-notes-5" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+<section class="section" id="course-notes-5"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Starting the Riemann-Lebesgue lemma</span>
 </h2>
-<div class="para" id="course-notes-5-2">Warm up: Use the limit definition of the derivative to find <span class="process-math">\(\frac{d}{dx} 4x^2\text{.}\)</span><div class="workspace" data-space="2in"></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<article class="definition definition-like" id="course-notes-5-3"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<section class="handout" id="course-notes-5-2" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
+<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Riemann Lebesgue Lemma part 1</span><div class="print-links"><a href="?printpreview=course-notes-5-2" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h3>
-<div class="para" id="course-notes-5-3-1-1">The derivative of a function <span class="process-math">\(f(x)\)</span> is defined as...<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="course-notes-5-2-2">
+<div class="para">Here are two things you will remember from the unit on the Riemann integral:</div>
+<ul class="disc" id="course-notes-5-2-2-1"><li id="course-notes-5-2-2-1-1">
+<div class="para" id="p-derived-course-notes-5-2-2-1-1"><details id="course-notes-5-2-2-1-1-1" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="course-notes-5-2-2-1-1-1-1">Every continuous function is integrable<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-2-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="workspace" data-space="1in"></div>
-<div class="autopermalink" data-description="Definition 5"><a href="#course-notes-5-3" title="Copy heading and permalink for Definition 5" aria-label="Copy heading and permalink for Definition 5">🔗</a></div></article><div class="autopermalink" data-description="Handout: Day 1 Guided Notes"><a href="#course-notes-5" title="Copy heading and permalink for Handout: Day 1 Guided Notes" aria-label="Copy heading and permalink for Handout: Day 1 Guided Notes">🔗</a></div></section>
+<div class="autopermalink" data-description="Solution 1"><a href="#course-notes-5-2-2-1-1-1" title="Copy heading and permalink for Solution 1" aria-label="Copy heading and permalink for Solution 1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Item"><a href="#course-notes-5-2-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li></ul>
+<div class="workspace" data-space=".5cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="course-notes-5-2-3">
+<ul class="disc" id="course-notes-5-2-3-1"><li id="course-notes-5-2-3-1-1">
+<div class="para" id="course-notes-5-2-3-1-1-1">
+<details id="course-notes-5-2-3-1-1-1-1" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="course-notes-5-2-3-1-1-1-1-1">The indicator function for the rationals <span class="process-math">\(\chi_\Q\)</span> is not integrable.  It is also discontinuous at every point in <span class="process-math">\(\R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-2-3-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1"><a href="#course-notes-5-2-3-1-1-1-1" title="Copy heading and permalink for Solution 1" aria-label="Copy heading and permalink for Solution 1">🔗</a></div>
+</div></details><div class="workspace" data-space=".5cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-2-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#course-notes-5-2-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li></ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="course-notes-5-2-4">This suggests the following.  Perhaps a function is integrable if and only if it is not too discontinuous whatever that means.<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-RiemLebLem"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Riemann Lebesgue lemma.</span>
+</h4>
+<div class="para" id="thm-RiemLebLem-2-1">A function <span class="process-math">\(f:[a,b]\to \R\)</span> is integrable over <span class="process-math">\([a,b]\)</span> if and only if <span class="process-math">\(m^*(\discont(f))=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-RiemLebLem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 5: The Riemann Lebesgue lemma"><a href="#thm-RiemLebLem" title="Copy heading and permalink for Theorem 5: The Riemann Lebesgue lemma" aria-label="Copy heading and permalink for Theorem 5: The Riemann Lebesgue lemma">🔗</a></div></article><div class="para" id="course-notes-5-2-6">Not a proof, but an idea:<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="course-notes-5-2-7">Recall a condition involving partitions that is equivalent to a function being integrable.<div class="workspace" data-space="1cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="course-notes-5-2-8" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="course-notes-5-2-8-1">
+<span class="process-math">\(f\)</span> is integrable if and only if for every <span class="process-math">\(\epsilon\gt 0\)</span> there is a partition <span class="process-math">\(P\)</span> with <span class="process-math">\(U(f,P)-L(f,P)\lt\epsilon\)</span><div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1"><a href="#course-notes-5-2-8" title="Copy heading and permalink for Solution 1" aria-label="Copy heading and permalink for Solution 1">🔗</a></div>
+</div></details><div class="para" id="course-notes-5-2-9">If we want to show that <span class="process-math">\(m^*(\discont(f))=0\)</span> then what do we need to show?<div class="workspace" data-space="1cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="course-notes-5-2-10" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="course-notes-5-2-10-1">For every <span class="process-math">\(\epsilon\gt 0\)</span> there is an countable cover <span class="process-math">\(\I\)</span> of <span class="process-math">\(\discont(f)\)</span> by open intervals with <span class="process-math">\(\ell(P) \lt \epsilon\)</span><div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-2-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2"><a href="#course-notes-5-2-10" title="Copy heading and permalink for Solution 2" aria-label="Copy heading and permalink for Solution 2">🔗</a></div>
+</div></details><div class="para" id="course-notes-5-2-11">So give an idea:<div class="workspace" data-space="1cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="course-notes-5-2-12" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="course-notes-5-2-12-1">Well, a parition is made out of intervals.  Maybe we can use a partition which has <span class="process-math">\(U(f,P)-L(P,f)\lt \epsilon\)</span> to build an open cover of the set o discontinuities.<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-2-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3"><a href="#course-notes-5-2-12" title="Copy heading and permalink for Solution 3" aria-label="Copy heading and permalink for Solution 3">🔗</a></div>
+</div></details><div class="para" id="course-notes-5-2-13">In order to make this work, we will need a few more details.<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Handout: The Riemann Lebesgue Lemma part 1"><a href="#course-notes-5-2" title="Copy heading and permalink for Handout: The Riemann Lebesgue Lemma part 1" aria-label="Copy heading and permalink for Handout: The Riemann Lebesgue Lemma part 1">🔗</a></div></section><section class="handout" id="course-notes-5-3" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
+<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Oscillation and <span class="process-math">\(\alpha\)</span>-discontinuity.</span><div class="print-links"><a href="?printpreview=course-notes-5-3" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+</h3>
+<article class="definition definition-like" id="def-oscillation"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="def-oscillation-1-1">For an interval <span class="process-math">\(I\text{,}\)</span> the net oscillation of a function <span class="process-math">\(f\)</span> over <span class="process-math">\(I\)</span> is given by <span class="process-math">\(\osc(f,I) = \Blank{2cm}\text{.}\)</span>  The oscillation of <span class="process-math">\(f\)</span> at a point <span class="process-math">\(x_0\)</span> is given by <span class="process-math">\(\osc(f,x_0) = \Blank{2cm}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-oscillation-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <details id="def-oscillation-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="def-oscillation-1-2-1">
+<span class="process-math">\(\osc(f, I) = \sup(f(I))-\inf(f(I))\text{,}\)</span> <span class="process-math">\(\osc(f,x_0)=\Lim_{h\to 0}\osc(f,(x_0-h,x_0+h))\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-oscillation-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1"><a href="#def-oscillation-1-2" title="Copy heading and permalink for Solution 1" aria-label="Copy heading and permalink for Solution 1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Definition 6"><a href="#def-oscillation" title="Copy heading and permalink for Definition 6" aria-label="Copy heading and permalink for Definition 6">🔗</a></div></article><div class="para" id="course-notes-5-3-3">Examples<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ul class="disc" id="course-notes-5-3-4">
+<li id="course-notes-5-3-4-1">
+<div class="para" id="course-notes-5-3-4-1-1">Explain why <span class="process-math">\(\osc(\sin(x), [0,\pi])=1\)</span> <div class="interactive-iframe-container"><iframe src="https://www.desmos.com/calculator/uoof2msb22?embed" id="course-notes-5-3-4-1-1-2" style="width:300px; height:150px; display: block; "></iframe></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-3-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="course-notes-5-3-4-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="course-notes-5-3-4-1-2-1">
+<span class="process-math">\(\sup(\{\sin(x)\mid x\in [0,\pi]\})=1\)</span> and <span class="process-math">\(\inf(\{\sin(x)\mid x\in [0,\pi]\})=0\text{,}\)</span> so <span class="process-math">\(\osc(\sin(x),[0,2\pi]) = 1-0=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-3-4-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1"><a href="#course-notes-5-3-4-1-2" title="Copy heading and permalink for Solution 1" aria-label="Copy heading and permalink for Solution 1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item"><a href="#course-notes-5-3-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="course-notes-5-3-4-2">
+<div class="para" id="course-notes-5-3-4-2-1">Explain why <span class="process-math">\(\osc(\sin(1/x), 0)=2\)</span> <div class="interactive-iframe-container"><iframe src="https://www.desmos.com/calculator/bm2wirmkp8?embed" id="course-notes-5-3-4-2-1-2" style="width:300px; height:150px; display: block; "></iframe></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-3-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="course-notes-5-3-4-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="course-notes-5-3-4-2-2-1">Let <span class="process-math">\(f(x)=\sin(1/x)\)</span> and <span class="process-math">\(I=(-\epsilon,\epsilon)\text{.}\)</span>  There are some <span class="process-math">\(a,b\in (-\epsilon, \epsilon)\)</span> with <span class="process-math">\(f(a)=1\)</span> and <span class="process-math">\(f(b)=-1\text{.}\)</span> (Get explicit values if your like.) Thus <span class="process-math">\(\sup(f[I])\ge 1\)</span> and <span class="process-math">\(\inf(f[I])\le 1\text{.}\)</span>  You can make these equality by remembering that the max and min values of <span class="process-math">\(\sin\)</span> are <span class="process-math">\(\pm1\text{.}\)</span>   Thus, <span class="process-math">\(\osc(\sin(1/x), (-\epsilon,\epsilon))=1-(-1)= 2\text{.}\)</span> Take the limit as <span class="process-math">\(\epsilon\to 0\)</span> to get <span class="process-math">\(\osc(f,0)=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-3-4-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1"><a href="#course-notes-5-3-4-2-2" title="Copy heading and permalink for Solution 1" aria-label="Copy heading and permalink for Solution 1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item"><a href="#course-notes-5-3-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<article class="proposition theorem-like" id="prop-alphaDisc"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="prop-alphaDisc-1-1">
+<span class="process-math">\(f\)</span> is discontinuous at <span class="process-math">\(x_0\)</span> if and only if <span class="process-math">\(\osc(f,x_0)&gt;0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop-alphaDisc-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 7"><a href="#prop-alphaDisc" title="Copy heading and permalink for Proposition 7" aria-label="Copy heading and permalink for Proposition 7">🔗</a></div></article><details id="course-notes-5-3-6" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="course-notes-5-3-6-1">Think about the contrapositive.  (<span class="process-math">\(f\)</span> is continuous iff <span class="process-math">\(\osc(f,x_0)=0\)</span>)<div class="workspace" data-space="2cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="course-notes-5-3-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="course-notes-5-3-6-2-1">Suppose <span class="process-math">\(f\)</span> is continuous and let <span class="process-math">\(\epsilon\gt0\text{.}\)</span>  There is a <span class="process-math">\(\delta\gt0\)</span> so that for all <span class="process-math">\(x\)</span> if <span class="process-math">\(|x-x_0|\lt\delta\)</span>  then  <span class="process-math">\(|x-x_0|\lt\delta\text{.}\)</span>  But this means that for all <span class="process-math">\(x\in (x_0-\delta, x_0+\delta)\text{,}\)</span> <span class="process-math">\(f(x_0)-\epsilon\lt f(x)\lt f(x_0)+\epsilon\text{.}\)</span>  But then <span class="process-math">\(f(x_0)-\epsilon\lt \inf(f((x_0-\delta, x_0+\delta)))\le\sup(f((x_0-\delta, x_0+\delta)))\lt f(x_0)+\epsilon\text{.}\)</span>  This can be used to show that <span class="process-math">\(0\le \sup(f((x_0-\delta, x_0+\delta)))-\inf(f((x_0-\delta, x_0+\delta)))\lt 2\epsilon\text{.}\)</span>  Divide <span class="process-math">\(\epsilon\)</span> by 2 to conclude that <span class="process-math">\(\osc(f,x_0)=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-3-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="course-notes-5-3-6-2-2">Suppose <span class="process-math">\(\osc(f,x_0)=0\)</span> is continuous and let <span class="process-math">\(\epsilon\gt0\text{.}\)</span>  Since <span class="process-math">\(\osc\)</span> is defined to be a limit.  There is some <span class="process-math">\(\delta\gt0\)</span> so that for all <span class="process-math">\(h\text{,}\)</span> if <span class="process-math">\(|h|\lt\delta\)</span> then <span class="process-math">\(\osc(f,(x_0-\delta, x_0+\delta))\lt \epsilon\text{.}\)</span>  Set <span class="process-math">\(I=(x_0-\delta, x_0+\delta)\)</span> But then for any <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(|x-x_0|\lt \delta\)</span> then <span class="process-math">\(f(x),f(x_0)\in (\inf(f(I)), \sup(f(I)))\text{,}\)</span> which by has length less that <span class="process-math">\(\epsilon\text{.}\)</span>  But that means that <span class="process-math">\(|f(x)-f(x_0)|\lt \epsilon\)</span><div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-3-6-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1"><a href="#course-notes-5-3-6-2" title="Copy heading and permalink for Solution 1.1" aria-label="Copy heading and permalink for Solution 1.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Proof 1"><a href="#course-notes-5-3-6" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div></article></details><div class="para" id="course-notes-5-3-7">Inspired by this, for any <span class="process-math">\(\alpha\gt0\)</span> we will set <span class="process-math">\(\discont(f,\alpha)\)</span> to be the set of all <span class="process-math">\(x\)</span> with <span class="process-math">\(\osc(f,x)\gt\alpha\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="corollary theorem-like" id="course-notes-5-3-8"><h4 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<span class="process-math">\(\discont(f) = \Cup_{n=1}^\infty \discont(f,\frac{1}{n})\)</span><div class="autopermalink" data-description="Corollary 8"><a href="#course-notes-5-3-8" title="Copy heading and permalink for Corollary 8" aria-label="Copy heading and permalink for Corollary 8">🔗</a></div></article><details id="course-notes-5-3-9" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="course-notes-5-3-9-1">
+<div class="workspace" data-space="1cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-3-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="course-notes-5-3-9-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="course-notes-5-3-9-2-1">
+<span class="process-math">\(x\in \discont(f)\)</span> <span class="process-math">\(\iff\)</span> <span class="process-math">\(\osc(f,x)\gt\epsilon\)</span> for some <span class="process-math">\(\epsilon\gt0\)</span> <span class="process-math">\(\iff\)</span> <span class="process-math">\(\osc(f,x)\gt1/n\)</span> for some <span class="process-math">\(n\in \N\)</span> <span class="process-math">\(\iff\)</span> <span class="process-math">\(\osc(f,x)&gt;\frac{1}{n}\)</span> for some <span class="process-math">\(n\in \N\)</span> <span class="process-math">\(\iff\)</span> <span class="process-math">\(x\in \Cup_{n=1}^\infty \discont(f,\frac{1}{n})\)</span><div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-3-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.1"><a href="#course-notes-5-3-9-2" title="Copy heading and permalink for Solution 2.1" aria-label="Copy heading and permalink for Solution 2.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Proof 2"><a href="#course-notes-5-3-9" title="Copy heading and permalink for Proof 2" aria-label="Copy heading and permalink for Proof 2">🔗</a></div></article></details><div class="para" id="course-notes-5-3-10">Here <span class="process-math">\(\discont(f)\)</span> is the set of all discontinuities of <span class="process-math">\(f\text{.}\)</span>  Look back at the definition of the outer measure.  <span class="process-math">\(m^*(\discont(f))=0\)</span> if and only if <span class="process-math">\(\dots\text{.}\)</span><div class="workspace" data-space="1cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="course-notes-5-3-11" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<span class="process-math">\(m^*(\discont(f))=0\)</span><span class="process-math">\(\epsilon\gt 0\)</span><span class="process-math">\(\I\)</span><span class="process-math">\(\discont(f)\)</span><span class="process-math">\(\epsilon\text{.}\)</span><div class="autopermalink" data-description="Solution 1"><a href="#course-notes-5-3-11" title="Copy heading and permalink for Solution 1" aria-label="Copy heading and permalink for Solution 1">🔗</a></div>
+</div></details><div class="para" id="course-notes-5-3-12">So, instead of proving that <span class="process-math">\(/discont(f)=0\)</span> we will show that <span class="process-math">\(\discont(f,1/n)=0\)</span> for all <span class="process-math">\(n\in \N\)</span><div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Handout: Oscillation and \alpha-discontinuity."><a href="#course-notes-5-3" title="Copy heading and permalink for Handout: Oscillation and \alpha-discontinuity." aria-label="Copy heading and permalink for Handout: Oscillation and \alpha-discontinuity.">🔗</a></div></section><section class="handout" id="course-notes-5-4" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
+<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Integrability implies <span class="process-math">\(\discont(f)\)</span> has measure zero.</span><div class="print-links"><a href="?printpreview=course-notes-5-4" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+</h3>
+<details id="course-notes-5-4-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="title">Half of the proof of the Riemann Lebesgue theorem.</span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="course-notes-5-4-2-2">Suppose that <span class="process-math">\(f\)</span> is integrable over <span class="process-math">\(I=[a,b]\)</span> and <span class="process-math">\(M=\sup(f(I)), m=\inf(f(I))\text{.}\)</span>  For any <span class="process-math">\(\epsilon\gt0\)</span> there is a partition <span class="process-math">\(P\)</span> so that (Get the oscilation to appear.<div class="workspace" data-space="1cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="course-notes-5-4-2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="course-notes-5-4-2-3-1">
+<span class="process-math">\(\epsilon \gt U(f,P)-L(U,P) = \Sum_{k=1}^n(\sup(f[I_k])-\inf(f[I_k]))\cdot\ell(I_k) = \Sum_{k=1}^n\osc(f,I_k)\cdot\ell(I_k)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-4-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1"><a href="#course-notes-5-4-2-3" title="Copy heading and permalink for Solution 1.1" aria-label="Copy heading and permalink for Solution 1.1">🔗</a></div>
+</div></details><div class="para" id="course-notes-5-4-2-4">Now fix any <span class="process-math">\(\alpha\gt0\)</span> and restrict this sum to <span class="process-math">\(Z_{\alpha}\)</span> the set of all <span class="process-math">\(k\)</span> with <span class="process-math">\(\osc(f,\alpha)\gt \alpha\text{.}\)</span>  Dropping some terms makes the sum smaller so that,<div class="workspace" data-space="1cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-4-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="course-notes-5-4-2-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="course-notes-5-4-2-5-1">
+<span class="process-math">\(\epsilon \gt \Sum_{k=1}^n\osc(f,I_k)\cdot\ell(I_k) \ge \Sum_{k=Z_{\alpha}}\osc(f,I_k)\cdot\ell(I_k) \gt \Sum_{k=Z_{\alpha}}\alpha\cdot\ell(I_k)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-4-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2"><a href="#course-notes-5-4-2-5" title="Copy heading and permalink for Solution 1.2" aria-label="Copy heading and permalink for Solution 1.2">🔗</a></div>
+</div></details><div class="para" id="course-notes-5-4-2-6">Divide both sides by <span class="process-math">\(\alpha\)</span><div class="workspace" data-space=".5cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-4-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="course-notes-5-4-2-7" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="course-notes-5-4-2-7-1">
+<span class="process-math">\(\epsilon/\alpha \gt \Sum_{k=Z_{\alpha}}\ell(I_k)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-4-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.3"><a href="#course-notes-5-4-2-7" title="Copy heading and permalink for Solution 1.3" aria-label="Copy heading and permalink for Solution 1.3">🔗</a></div>
+</div></details><div class="para" id="course-notes-5-4-2-8">Fact (almost) If <span class="process-math">\(x\in \discont(f,\alpha)\text{,}\)</span> and <span class="process-math">\(x\in I_k\)</span> then <span class="process-math">\(\osc(f,I_k)&gt;\alpha\text{.}\)</span>  Say something about a cover.  (Homework: Fix this claim and prove it)<div class="workspace" data-space="1cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-4-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="course-notes-5-4-2-9" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="course-notes-5-4-2-9-1">Every <span class="process-math">\(x\in \discont(f,\alpha)\)</span> is therefore in some <span class="process-math">\(I_k\)</span> with <span class="process-math">\(k\in Z(\alpha)\text{.}\)</span>  <span class="process-math">\(\{I_k\mid k\in Z(\alpha)\}\)</span> is a cover of <span class="process-math">\(\discont(f,\alpha)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-4-2-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.4"><a href="#course-notes-5-4-2-9" title="Copy heading and permalink for Solution 1.4" aria-label="Copy heading and permalink for Solution 1.4">🔗</a></div>
+</div></details><div class="para" id="course-notes-5-4-2-10">Make a conclusion<div class="workspace" data-space="1.5cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-5-4-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="course-notes-5-4-2-11" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<span class="process-math">\(m^*(\discont(f,\alpha)\le \Sum_{k=Z_{\alpha}}m^*(I_k)=\Sum_{k=Z_{\alpha}}\ell(I_k))\lt \epsilon/\alpha\text{.}\)</span><span class="process-math">\(\epsilon\to 0\)</span><span class="process-math">\(m^*\discont(f,\alpha)=0\text{.}\)</span><span class="process-math">\(\discont(f)=\Cup_{n=1}^\infty \discont(f,\alpha)\text{,}\)</span><span class="process-math">\(m^*(\discont(f))=0\text{.}\)</span><div class="autopermalink" data-description="Solution 1.5"><a href="#course-notes-5-4-2-11" title="Copy heading and permalink for Solution 1.5" aria-label="Copy heading and permalink for Solution 1.5">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Proof 1: Half of the proof of the Riemann Lebesgue theorem"><a href="#course-notes-5-4-2" title="Copy heading and permalink for Proof 1: Half of the proof of the Riemann Lebesgue theorem" aria-label="Copy heading and permalink for Proof 1: Half of the proof of the Riemann Lebesgue theorem">🔗</a></div></article></details><div class="autopermalink" data-description="Handout: Integrability implies \discont(f) has measure zero."><a href="#course-notes-5-4" title="Copy heading and permalink for Handout: Integrability implies \discont(f) has measure zero." aria-label="Copy heading and permalink for Handout: Integrability implies \discont(f) has measure zero.">🔗</a></div></section><div class="autopermalink" data-description="Section: Starting the Riemann-Lebesgue lemma"><a href="#course-notes-5" title="Copy heading and permalink for Section: Starting the Riemann-Lebesgue lemma" aria-label="Copy heading and permalink for Section: Starting the Riemann-Lebesgue lemma">🔗</a></div></section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="course-notes-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="notes-week-02.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="course-notes-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="course-notes-6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
