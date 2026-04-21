@@ -178,7 +178,7 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Riemann Lebesgue part 1 homework (optional)",
-  "body": " Riemann Lebesgue part 1 homework (optional)    Pull up a graph of in your favourite graphing utility (Maybe desmos). Tell me what is and write a few sentences justifying your conclusion    Recall the indicator function for , . Prove that for all    We mentioned in the notes that there is a gap. It is not the case that if and then . Prove the following  Claim if and then either is en endpoint of or .   Use the obsevation above to fix the proof we did in the notes of the following. Claim If is integrable then .  Hint: Instead of using the open cover , try where \"small\" you need to pick and .    "
+  "body": " Riemann Lebesgue part 1 homework (optional)    Pull up a graph of in your favourite graphing utility (Maybe desmos). Tell me what is and write a few sentences justifying your conclusion    Recall the indicator function for , . Prove that for all    We mentioned in the notes that there is a gap. It is not the case that if and then . Prove the following  Claim if and then either is en endpoint of or .   Use the observation above to fix the proof we did in the notes of the following. Claim If is integrable then .  Hint: Instead of using the open cover , try where \"small\" you need to pick and .    "
 },
 {
   "id": "notes-week-02",
