@@ -96,8 +96,8 @@ var ptx_lunr_docs = [
   "url": "course-notes-5.html",
   "type": "Section",
   "number": "",
-  "title": "Starting the Riemann-Lebesgue lemma",
-  "body": " Starting the Riemann-Lebesgue lemma   The Riemann Lebesgue Lemma part 1  Here are two things you will remember from the unit on the Riemann integral:   Every continuous function is integrable         The indicator function for the rationals is not integrable. It is also discontinuous at every point in .      This suggests the following. Perhaps a function is integrable if and only if it is not too discontinuous whatever that means.   The Riemann Lebesgue lemma   A function is integrable over if and only if      Not a proof, but an idea:  Recall a condition involving partitions that is equivalent to a function being integrable.    is integrable if and only if for every there is a partition with    If we want to show that then what do we need to show?   For every there is an countable cover of by open intervals with    So give an idea:   Well, a parition is made out of intervals. Maybe we can use a partition which has to build an open cover of the set o discontinuities.   In order to make this work, we will need a few more details.    Oscillation and -discontinuity.    For an interval , the net oscillation of a function over is given by . The oscillation of at a point is given by     ,      Examples    Explain why    and , so    Explain why .   Let and . There are some with and . (Get explicit values if your like.) Thus and . You can make these equality by remembering that the max and min values of are . Thus, . Take the limit as to get       is discontinuous at if and only if      Think about the contrapositive. ( is continuous iff )  Suppose is continuous and let . There is a so that for all if then . But this means that for all , . But then . This can be used to show that . Divide by 2 to conclude that .  Suppose is continuous and let . Since is defined to be a limit. There is some so that for all , if then . Set But then for any , if then , which by has length less that . But that means that     Inspired by this, for any we will set to be the set of all with .         for some   for some   for some     Here is the set of all discontinuities of . Look back at the definition of the outer measure. if and only if .   if and only if for every there is a countable cover of by open interval with total length less than .  So, instead of proving that we will show that for all    Integrability implies has measure zero.  Half of the proof of the Riemann Lebesgue theorem  Suppose that is integrable over and . For any there is a partition so that (Get the oscilation to appear.       Now fix any and restrict this sum to the set of all with . Dropping some terms makes the sum smaller so that,       Divide both sides by        Fact (almost) If , and then . Say something about a cover. (Homework: Fix this claim and prove it)   Every is therefore in some with . is a cover of    Make a conclusion  Bu sub-additivity of outer measure . Take the limit as to conclude that . Since , subadditivity concludes .    "
+  "title": "Starting the Riemann-Lebesgue theorem on integrability",
+  "body": " Starting the Riemann-Lebesgue theorem on integrability    Here are two things you will remember from the unit on the Riemann integral:   Every continuous function is integrable         The indicator function for the rationals is not integrable. It is also discontinuous at every point in .      This suggests the following. Perhaps a function is integrable if and only if it is \"not too\" discontinuous .   The Riemann Lebesgue theoremm   A function is integrable over if and only if     Here means  is the set of all inputs where is discontinuous.   Not a proof, but an idea:  Recall a condition involving partitions that is equivalent to a function being integrable.    is integrable if and only if for every there is a partition with    If we want to show that then what do we need to show?    if and only if for every there is an countable cover of by open intervals with    So give an idea:   Well, a partition is made out of intervals. Maybe we can use a partition which has to build an open cover of the set of discontinuities which has very little length.   In order to make this work, we will need a few more details.     For an interval , the net oscillation of a function over is given by . The oscillation of at a point is given by     ,      Examples    Explain why and   The graph of and          and , so Let and . There are some with and . (Get explicit values if your like.) Thus and . You can make these equality by remembering that the max and min values of are . Thus, . Take the limit as to get       is discontinuous at if and only if      Think about the contrapositive. ( is continuous at iff )  Suppose is continuous and let . There is a so that for all if then . But this means that for all , . But then . This can be used to show that . Divide by 2 to conclude that .  Suppose is continuous and let . Since is defined to be a limit. There is some so that for all , if then . Set But then for any , if then , which by has length less that . But that means that     Inspired by this, for any we will set to be the set of all with .         for some   for some   for some      if and only if for every there is a countable cover of by open interval with total length less than .  So, instead of proving that we will show that for all   Integrability implies has measure zero.  Half of the proof of the Riemann Lebesgue theorem  Suppose that is integrable over and . For any there is a partition so that (Get the oscilation to appear.)       Now fix any and restrict this sum to the set of all with . Dropping some terms makes the sum smaller so that,       Divide both sides by        Fact (almost) If , and then . Say something about a cover. (Homework: Fix this claim and prove it)   Every is therefore in some with . is a cover of    Make a conclusion  Bu sub-additivity of outer measure . Take the limit as to conclude that . Since , subadditivity concludes .    "
 },
 {
   "id": "thm-RiemLebLem",
@@ -105,8 +105,8 @@ var ptx_lunr_docs = [
   "url": "course-notes-5.html#thm-RiemLebLem",
   "type": "Theorem",
   "number": "5",
-  "title": "The Riemann Lebesgue lemma.",
-  "body": " The Riemann Lebesgue lemma   A function is integrable over if and only if    "
+  "title": "The Riemann Lebesgue theoremm.",
+  "body": " The Riemann Lebesgue theoremm   A function is integrable over if and only if    "
 },
 {
   "id": "def-oscillation",
@@ -118,49 +118,58 @@ var ptx_lunr_docs = [
   "body": "  For an interval , the net oscillation of a function over is given by . The oscillation of at a point is given by     ,     "
 },
 {
+  "id": "course-notes-5-2-18-1-1-3",
+  "level": "2",
+  "url": "course-notes-5.html#course-notes-5-2-18-1-1-3",
+  "type": "Table",
+  "number": "7",
+  "title": "The graph of <span class=\"process-math\">\\(\\sin(x)\\)<\/span> and <span class=\"process-math\">\\(\\sin(1\/x)\\)<\/span>",
+  "body": " The graph of and        "
+},
+{
   "id": "prop-alphaDisc",
   "level": "2",
   "url": "course-notes-5.html#prop-alphaDisc",
   "type": "Proposition",
-  "number": "7",
+  "number": "8",
   "title": "",
   "body": "   is discontinuous at if and only if    "
 },
 {
-  "id": "course-notes-5-3-6",
+  "id": "course-notes-5-2-20",
   "level": "2",
-  "url": "course-notes-5.html#course-notes-5-3-6",
+  "url": "course-notes-5.html#course-notes-5-2-20",
   "type": "Proof",
   "number": "1",
   "title": "",
-  "body": " Think about the contrapositive. ( is continuous iff )  Suppose is continuous and let . There is a so that for all if then . But this means that for all , . But then . This can be used to show that . Divide by 2 to conclude that .  Suppose is continuous and let . Since is defined to be a limit. There is some so that for all , if then . Set But then for any , if then , which by has length less that . But that means that    "
+  "body": " Think about the contrapositive. ( is continuous at iff )  Suppose is continuous and let . There is a so that for all if then . But this means that for all , . But then . This can be used to show that . Divide by 2 to conclude that .  Suppose is continuous and let . Since is defined to be a limit. There is some so that for all , if then . Set But then for any , if then , which by has length less that . But that means that    "
 },
 {
-  "id": "course-notes-5-3-8",
+  "id": "course-notes-5-2-22",
   "level": "2",
-  "url": "course-notes-5.html#course-notes-5-3-8",
+  "url": "course-notes-5.html#course-notes-5-2-22",
   "type": "Corollary",
-  "number": "8",
+  "number": "9",
   "title": "",
   "body": "  "
 },
 {
-  "id": "course-notes-5-3-9",
+  "id": "course-notes-5-2-23",
   "level": "2",
-  "url": "course-notes-5.html#course-notes-5-3-9",
+  "url": "course-notes-5.html#course-notes-5-2-23",
   "type": "Proof",
   "number": "2",
   "title": "",
   "body": "    for some   for some   for some    "
 },
 {
-  "id": "course-notes-5-4-2",
+  "id": "course-notes-5-2-27",
   "level": "2",
-  "url": "course-notes-5.html#course-notes-5-4-2",
+  "url": "course-notes-5.html#course-notes-5-2-27",
   "type": "Proof",
-  "number": "1",
+  "number": "3",
   "title": "Half of the proof of the Riemann Lebesgue theorem.",
-  "body": "Half of the proof of the Riemann Lebesgue theorem  Suppose that is integrable over and . For any there is a partition so that (Get the oscilation to appear.       Now fix any and restrict this sum to the set of all with . Dropping some terms makes the sum smaller so that,       Divide both sides by        Fact (almost) If , and then . Say something about a cover. (Homework: Fix this claim and prove it)   Every is therefore in some with . is a cover of    Make a conclusion  Bu sub-additivity of outer measure . Take the limit as to conclude that . Since , subadditivity concludes .  "
+  "body": "Half of the proof of the Riemann Lebesgue theorem  Suppose that is integrable over and . For any there is a partition so that (Get the oscilation to appear.)       Now fix any and restrict this sum to the set of all with . Dropping some terms makes the sum smaller so that,       Divide both sides by        Fact (almost) If , and then . Say something about a cover. (Homework: Fix this claim and prove it)   Every is therefore in some with . is a cover of    Make a conclusion  Bu sub-additivity of outer measure . Take the limit as to conclude that . Since , subadditivity concludes .  "
 },
 {
   "id": "course-notes-6",
@@ -176,7 +185,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "course-notes-6.html#course-notes-6-3",
   "type": "Definition",
-  "number": "9",
+  "number": "10",
   "title": "",
   "body": "  The derivative of a function is defined as...   "
 },
