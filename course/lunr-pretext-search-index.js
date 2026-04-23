@@ -55,9 +55,9 @@ var ptx_lunr_docs = [
   "body": "   Any countable set is a countable union of singleton sets: so countable subadditivity and the fact that singletons have measure zero completes the proof.   "
 },
 {
-  "id": "sec--3-2",
+  "id": "MeasureVsLength",
   "level": "2",
-  "url": "sec-.html#sec--3-2",
+  "url": "sec-.html#MeasureVsLength",
   "type": "Theorem",
   "number": "4",
   "title": "measure agrees with length.",
@@ -97,7 +97,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "Starting the Riemann-Lebesgue theorem on integrability",
-  "body": " Starting the Riemann-Lebesgue theorem on integrability    Here are two things you will remember from the unit on the Riemann integral:   Every continuous function is integrable         The indicator function for the rationals is not integrable. It is also discontinuous at every point in .      This suggests the following. Perhaps a function is integrable if and only if it is \"not too\" discontinuous .   The Riemann Lebesgue theoremm   A function is integrable over if and only if     Here means  is the set of all inputs where is discontinuous.   Not a proof, but an idea:  Recall a condition involving partitions that is equivalent to a function being integrable.    is integrable if and only if for every there is a partition with    If we want to show that then what do we need to show?    if and only if for every there is an countable cover of by open intervals with    So give an idea:   Well, a partition is made out of intervals. Maybe we can use a partition which has to build an open cover of the set of discontinuities which has very little length.   In order to make this work, we will need a few more details.     For an interval , the net oscillation of a function over is given by . The oscillation of at a point is given by     ,        Examples: Explain why and   The graph of and          and , so Let and . There are some with and . (Get explicit values if your like.) Thus and . You can make these equality by remembering that the max and min values of are . Thus, . Take the limit as to get       is discontinuous at if and only if      Think about the contrapositive. ( is continuous at iff )  Suppose is continuous and let . There is a so that for all if then . But this means that for all , . But then . This can be used to show that . Divide by 2 to conclude that .  Suppose is continuous and let . Since is defined to be a limit. There is some so that for all , if then . Set But then for any , if then , which by has length less that . But that means that     Inspired by this, for any we will set to be the set of all with .         for some   for some   for some      if and only if for every there is a countable cover of by open interval with total length less than .  So, instead of proving that we will show that for all   Integrability implies has measure zero.  Half of the proof of the Riemann Lebesgue theorem  Suppose that is integrable over and . For any there is a partition so that (Get the oscilation to appear.)       Now fix any and restrict this sum to the set of all with . Dropping some terms makes the sum smaller so that,       Divide both sides by        Fact (almost) If , and then . Say something about a cover. (Homework: Fix this claim and prove it)   Every is therefore in some with . is a cover of    Make a conclusion  Bu sub-additivity of outer measure . Take the limit as to conclude that . Since , subadditivity concludes .    "
+  "body": " Starting the Riemann-Lebesgue theorem on integrability    Here are two things you will remember from the unit on the Riemann integral:   Every continuous function is integrable         The indicator function for the rationals is not integrable. It is also discontinuous at every point in .      This suggests the following. Perhaps a function is integrable if and only if it is \"not too\" discontinuous .   The Riemann Lebesgue theorem   A function is integrable over if and only if     Here means  is the set of all inputs where is discontinuous.   Not a proof, but an idea:  Recall a condition involving partitions that is equivalent to a function being integrable.    is integrable if and only if for every there is a partition with    If we want to show that then what do we need to show?    if and only if for every there is an countable cover of by open intervals with    So give an idea:   Well, a partition is made out of intervals. Maybe we can use a partition which has to build an open cover of the set of discontinuities which has very little length.   In order to make this work, we will need a few more details.     For an interval , the net oscillation of a function over is given by . The oscillation of at a point is given by     ,        Examples: Explain why and   The graph of and          and , so Let and . There are some with and . (Get explicit values if your like.) Thus and . You can make these equality by remembering that the max and min values of are . Thus, . Take the limit as to get       is discontinuous at if and only if      Think about the contrapositive. ( is continuous at iff )  Suppose is continuous and let . There is a so that for all if then . But this means that for all , . But then . This can be used to show that . Divide by 2 to conclude that .  Suppose is continuous and let . Since is defined to be a limit. There is some so that for all , if then . Set But then for any , if then , which by has length less that . But that means that     Inspired by this, for any we will set to be the set of all with .         for some   for some   for some      if and only if for every there is a countable cover of by open interval with total length less than .  So, instead of proving that we will show that for all   Integrability implies has measure zero.  Half of the proof of the Riemann Lebesgue theorem  Suppose that is integrable over and . For any there is a partition so that (Get the oscilation to appear.)       Now fix any and restrict this sum to the set of all with . Dropping some terms makes the sum smaller so that,       Divide both sides by        Fact (almost) If , and then . Say something about a cover. (Homework: Fix this claim and prove it)   Every is therefore in some with . is a cover of    Make a conclusion  Bu sub-additivity of outer measure . Take the limit as to conclude that . Since , subadditivity concludes .    "
 },
 {
   "id": "thm-RiemLebLem",
@@ -105,8 +105,8 @@ var ptx_lunr_docs = [
   "url": "course-notes-5.html#thm-RiemLebLem",
   "type": "Theorem",
   "number": "5",
-  "title": "The Riemann Lebesgue theoremm.",
-  "body": " The Riemann Lebesgue theoremm   A function is integrable over if and only if    "
+  "title": "The Riemann Lebesgue theorem.",
+  "body": " The Riemann Lebesgue theorem   A function is integrable over if and only if    "
 },
 {
   "id": "def-oscillation",
@@ -181,13 +181,103 @@ var ptx_lunr_docs = [
   "body": " Riemann Lebesgue part 1 homework (optional)    Pull up a graph of in your favourite graphing utility (Maybe desmos). Tell me what is and write a few sentences justifying your conclusion    Recall the indicator function for , . Prove that for all    We mentioned in the notes that there is a gap. It is not the case that if and then . Prove the following  Claim if and then either is en endpoint of or .   Use the observation above to fix the proof we did in the notes of the following. Claim If is integrable then .  Hint: Instead of using the open cover , try where \"small\" you need to pick and .    "
 },
 {
-  "id": "notes-week-02",
+  "id": "course-notes-7",
   "level": "1",
-  "url": "notes-week-02.html",
+  "url": "course-notes-7.html",
   "type": "Section",
   "number": "",
-  "title": "Week 2",
-  "body": " Week 2   Monday      Wednesday      Friday     "
+  "title": "Finishing the Riemann-Lebesgue theorem on integrability",
+  "body": " Finishing the Riemann-Lebesgue theorem on integrability   Finishing the Riemann-Lebesgue theorem on integrability  Our goal is the proof Recall what it says   A bounded function is integrable if and only if has measure zero.   We have already proven one direction   We've already proven that integrability implies that the set of discontinuities is measure 0.   We still need to prove the reverse:   We need to prove that if the set of discontinuities is measure zero then is integrable   We will need two more propositions in our argument The first says that if you can bound the oscillation at every point, then you control the difference between the upper and lower integrals.   Let , be bounded and satisfy that . Then    The second says that is compact (Recall what \"compact\" means, as well as a theorem from analysis I that says excactly what sets are compact   A set being \"compact\" means that every open cover has a finite subcover. In analysis I you proved that a subset of is compact if and only if it is closed and bounded.    Let be a function and . Then is compact. (Even though might not be)   Proof of is homework.   Example   Use the picture below to explain why has non-closed discontinuity set, but is closed desmos link - See what happens as you zoom in.        I see jump discontinuities at -values that approach 0. But at there is not a discontinuity, so is not closed (It fails to contain at least one limit point.) The jups at the discontinuities as get really small, though, so for any fixed , is not a limit point of .    Proof that integrability assuming and Fix some . Explain why   Since monotonicity of measure says that .  Since    there is a countable cover of by intervas with   Use compactness and simplify, use a result about finite unions of open intervals from the proof of End with dijoint cover by open intervals.  Since is an opencover of a compact set, it has a finite subcover , Since taking a subcover coes not increase total length, . Now we use th inductive argument from the proof of to see that there is a finite union of disjoint intervals with . Conclusion : We now have a cover of by disjoint open intervals with  Put these in order: If (or ) then replace by (or by ) draw a picture  Before:   After:    Before:   After:    Now break everything up into subintegrals: . Use to get a bound   Break into sub-sums: Over use that is bounded so there are some and with for all  Over there are not points in , : Thus,           A bit more space for the proof that integrability    Proving  Let , be bounded and satisfy that . We need to show that  We need a lemma    Let , be bounded and satisfy that . For any , there is a single so that for every intervals with length ,      Proof of assuming  We get to assume all of the hypotheses of . Consider any and let be the positive number produced by the Lemma. Let be a partition of into intervals each with length less than . Complete the proof.   . We required that the length of is less than , which we chose using . Thus, and so . Since this completes the proof.     Proof of  We will use compactness. Recall what we mean when we say that is compact.  Let . Write down the limit definition of and use it to build a different choice of for each .    . So there is a so that for all , .   Maybe you want to tke the minimum of these 's, but there are infinitely many. Use compact to get them down to a finite list. For technical reasons, divide the 's by 2.    is an open cover of . So, it has a finite subcover, .   Let and be a subset of length less that . Argue that for some .  Let . Then for some . Since .this means that .   Finish the proof   Since , .     "
+},
+{
+  "id": "propBoundDiff",
+  "level": "2",
+  "url": "course-notes-7.html#propBoundDiff",
+  "type": "Proposition",
+  "number": "10",
+  "title": "",
+  "body": " Let , be bounded and satisfy that . Then   "
+},
+{
+  "id": "compactalphaDisc",
+  "level": "2",
+  "url": "course-notes-7.html#compactalphaDisc",
+  "type": "Proposition",
+  "number": "11",
+  "title": "",
+  "body": " Let be a function and . Then is compact. (Even though might not be)  "
+},
+{
+  "id": "course-notes-7-2-14",
+  "level": "2",
+  "url": "course-notes-7.html#course-notes-7-2-14",
+  "type": "Table",
+  "number": "12",
+  "title": "Example",
+  "body": " Example   Use the picture below to explain why has non-closed discontinuity set, but is closed desmos link - See what happens as you zoom in.      "
+},
+{
+  "id": "course-notes-7-2-17",
+  "level": "2",
+  "url": "course-notes-7.html#course-notes-7-2-17",
+  "type": "Proof",
+  "number": "1",
+  "title": "Proof that <span class=\"process-math\">\\(m^*(\\discont(f)=0)\\implies\\)<\/span> integrability assuming Proposition 10 and Proposition 11.",
+  "body": "Proof that integrability assuming and Fix some . Explain why   Since monotonicity of measure says that .  Since    there is a countable cover of by intervas with   Use compactness and simplify, use a result about finite unions of open intervals from the proof of End with dijoint cover by open intervals.  Since is an opencover of a compact set, it has a finite subcover , Since taking a subcover coes not increase total length, . Now we use th inductive argument from the proof of to see that there is a finite union of disjoint intervals with . Conclusion : We now have a cover of by disjoint open intervals with  Put these in order: If (or ) then replace by (or by ) draw a picture  Before:   After:    Before:   After:    Now break everything up into subintegrals: . Use to get a bound   Break into sub-sums: Over use that is bounded so there are some and with for all  Over there are not points in , : Thus,      "
+},
+{
+  "id": "MoreProof",
+  "level": "2",
+  "url": "course-notes-7.html#MoreProof",
+  "type": "Proof",
+  "number": "1",
+  "title": "A bit more space for the proof that <span class=\"process-math\">\\(m^*(\\discont(f)=0)\\implies\\)<\/span> integrability.",
+  "body": " A bit more space for the proof that integrability   "
+},
+{
+  "id": "lemmaBoundDiff",
+  "level": "2",
+  "url": "course-notes-7.html#lemmaBoundDiff",
+  "type": "Lemma",
+  "number": "13",
+  "title": "",
+  "body": "  Let , be bounded and satisfy that . For any , there is a single so that for every intervals with length ,    "
+},
+{
+  "id": "course-notes-7-3-7",
+  "level": "2",
+  "url": "course-notes-7.html#course-notes-7-3-7",
+  "type": "Proof",
+  "number": "2",
+  "title": "Proof of Proposition 10 assuming Lemma 13.",
+  "body": " Proof of assuming  We get to assume all of the hypotheses of . Consider any and let be the positive number produced by the Lemma. Let be a partition of into intervals each with length less than . Complete the proof.   . We required that the length of is less than , which we chose using . Thus, and so . Since this completes the proof.   "
+},
+{
+  "id": "course-notes-7-3-8",
+  "level": "2",
+  "url": "course-notes-7.html#course-notes-7-3-8",
+  "type": "Proof",
+  "number": "3",
+  "title": "Proof of Lemma 13.",
+  "body": " Proof of  We will use compactness. Recall what we mean when we say that is compact.  Let . Write down the limit definition of and use it to build a different choice of for each .    . So there is a so that for all , .   Maybe you want to tke the minimum of these 's, but there are infinitely many. Use compact to get them down to a finite list. For technical reasons, divide the 's by 2.    is an open cover of . So, it has a finite subcover, .   Let and be a subset of length less that . Argue that for some .  Let . Then for some . Since .this means that .   Finish the proof   Since , .   "
+},
+{
+  "id": "course-notes-8",
+  "level": "1",
+  "url": "course-notes-8.html",
+  "type": "Handout",
+  "number": "",
+  "title": "Riemann Lebesgue part 2 homework (optional)",
+  "body": " Riemann Lebesgue part 2 homework (optional)    Prove     In the notes we observed that is not closed. Prove it.  Compose either a direct proof of a proof or a shorter indirect proof of the following   Let be a sequence of functions which converge uniformly to a limiting function . Suppose that for each , is measure zero. Prove that has measure zero.    "
+},
+{
+  "id": "course-notes-8-2-3-2",
+  "level": "2",
+  "url": "course-notes-8.html#course-notes-8-2-3-2",
+  "type": "Claim",
+  "number": "14",
+  "title": "",
+  "body": " Let be a sequence of functions which converge uniformly to a limiting function . Suppose that for each , is measure zero. Prove that has measure zero.  "
 },
 {
   "id": "activity-01-intro-activity",
@@ -206,24 +296,6 @@ var ptx_lunr_docs = [
   "number": "1",
   "title": "",
   "body": "  This is the first exercise.   "
-},
-{
-  "id": "handouts",
-  "level": "1",
-  "url": "handouts.html",
-  "type": "Chapter",
-  "number": "",
-  "title": "Handouts",
-  "body": " Handouts    "
-},
-{
-  "id": "homework",
-  "level": "1",
-  "url": "homework.html",
-  "type": "Chapter",
-  "number": "",
-  "title": "Homework",
-  "body": " Homework    "
 }
 ]
 
